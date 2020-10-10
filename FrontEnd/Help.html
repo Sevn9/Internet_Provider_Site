@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HelpPage</title>
+    <link rel="stylesheet" href="../Internet_Provider_Website/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/site.css" type = "text/css"/>
+    <link rel="stylesheet" href="./css/StyleSheet.css" type = "text/css"/>
+    <link rel="stylesheet" href="./css/HelpPage.css" type = "text/css"/>
+</head>
+<body>
+    <header>
+        <ul class="header-container">
+            <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle navbar-brand text-color" asp-page="/Index" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Internet Service Provider
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Услуги</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Акции и бонусы</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Оплата</a>
+                    </div>
+                </div>
+            </li>
+            <li><a asp-page="/Tariffs" class="nav-item  text-color">Тарифы</a></li>
+            <li><a asp-page="/Chat" class="nav-item  text-color">Чат</a></li>
+            <li><a asp-page="/Help" class="nav-item  text-color">Помощь</a></li>
+            <li>
+                <div class="right-item">
+                    <a asp-page="/LK" class="nav-item  text-color" id="Login">Войти</a>
+                    <a asp-page="/Registration-page" class="nav-item  text-color " id="Registration">Регистрация</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <!--контент -->
+    <div class="help-main-content">
+        <h3 class="top-text">Часто задаваемые вопросы</h3>
+    
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="help-text-space"><strong>Как мне настроить роутер самостоятельно?</strong></div>
+                    <div class="reply">В своём стремлении повысить качество жизни, они забывают, что реализация намеченных плановых 
+                        заданий требует от нас анализа вывода текущих активов. Также как убеждённость некоторых оппонентов предопределяет 
+                        высокую востребованность экономической целесообразности принимаемых решений. Безусловно, глубокий уровень 
+                        погружения создаёт предпосылки для поэтапного и последовательного развития общества.</div>
+                    <img src="./images/img2_cut.jpg" class="d-block w-100 help-img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <div class="help-text-space"><strong>В моем городе нет офиса провайдера!</strong></div>
+                    <div class="reply">В своём стремлении повысить качество жизни, они забывают, что реализация намеченных плановых 
+                        заданий требует от нас анализа вывода текущих активов. Также как убеждённость некоторых оппонентов предопределяет 
+                        высокую востребованность экономической целесообразности принимаемых решений. Безусловно, глубокий уровень 
+                        погружения создаёт предпосылки для поэтапного и последовательного развития общества.</div>
+                    <img src="./images/office1_cut.jpg" class="d-block w-100 help-img" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <div class="help-text-space"><strong>В моем районе не подключен ??????, что делать?</strong></div>
+                    <div class="reply">В своём стремлении повысить качество жизни, они забывают, что реализация намеченных плановых 
+                        заданий требует от нас анализа вывода текущих активов. Также как убеждённость некоторых оппонентов предопределяет 
+                        высокую востребованность экономической целесообразности принимаемых решений. Безусловно, глубокий уровень 
+                        погружения создаёт предпосылки для поэтапного и последовательного развития общества.</div>
+                    <img src="./images/dunno.png" class="d-block w-100 help-img" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        
+        <div class="search_solution">
+            <h4>Не нашли ответ на свой вопрос? Воспользуйтесь телефоном горячей линии:
+                <div class="tel">+7 (800) 200-65-75</div></h4>
+        </div>  
+    </div>
+    <div class="help_space-container"></div>
+    <!--контент кончився-->
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - InternetServiceProvider - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="../Internet_Provider_Website/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../Internet_Provider_Website/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../Internet_Provider_Website/wwwroot/js/site.js" asp-append-version="true"></script> -->
+    <script src="./js/site.js" asp-append-version="true"></script>
+</body>
+</html>
