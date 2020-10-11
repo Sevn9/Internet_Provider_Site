@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kazan Provider</title>
+    <link rel="stylesheet" href="../Internet_Provider_Website/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/site.css" type="text/css" />
+    <link rel="stylesheet" href="./css/StyleSheet.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <ul class="header-container">
+            <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle navbar-brand text-color" asp-page="/Index" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kazan.Provider
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Услуги</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Акции и бонусы</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Оплата</a>
+                    </div>
+                </div>
+            </li>
+            <li><a asp-page="/Tariffs" class="nav-item  text-color">Тарифы</a></li>
+            <li><a asp-page="/Reviews" class="nav-item  text-color">Отзывы</a></li>
+            <li><a asp-page="/Help" class="nav-item  text-color">Помощь</a></li>
+            <li>
+                <div class="right-item">
+                    <a asp-page="/LK" class="nav-item  text-color" id="Login">Выйти</a>
+                    <!-- <a asp-page="/Registration-page" class="nav-item  text-color " id="Registration">Регистрация</a> -->
+                </div>
+            </li>
+        </ul>
+    </header>
+<!-- start -->
+<div class="t-details" style="margin-left:26%; margin-top: 10%;">
+    <div class="d-flex t-details flex-column">
+        <div class="col col-lg-9 " style="font-size: 20px;">
+            <h4 class="d-flex row justify-content-between td-pad">Тариф "Домашний"</h4>
+            <div class="d-flex row justify-content-between td-pad">
+                <div>Категория:</div>
+                <div>Домашний интернет</div>
+            </div><hr>
+            <div class="d-flex row justify-content-between td-pad">
+                <div type="button" data-toggle="modal" data-target="#speedModal">Скорость доступа к сети интернет:</div>
+                <div>70 МБит/c</div>
+            </div><hr>
+            <div class="d-flex row justify-content-between td-pad">
+              <div>Дополнительные возможности:</div>
+              <div>???</div>
+          </div><hr>
+            <div class="d-flex row justify-content-between td-pad"> 
+                <div type="button" data-toggle="modal" data-target="#wifiModal">Wi-Fi роутер:</div>
+                <div>входит</div>
+            </div><hr>
+            <h4 class="d-flex row justify-content-between td-pad">Итого:</h4>
+            <div class="d-flex row justify-content-between td-pad">
+                <div>Абонентская плата:</div>
+                <div>600&#8381;/мес</div>
+            </div><hr>
+            <form action="#">
+                <button asp-page="/" type="button" class="btn btn-primary btn-block" style=" font-size: 18px;">Подключить этот тариф</button> <!--только для зарегистрированных пользователей-->
+            </form>
+            <span style="font-size: 15px; margin-left: 2%;">Уже используете этот тариф? <a href="#">Оставьте отзыв</a></span>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="speedModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Скорость интернета</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>Скорость доступа к сети интернет: 70 МБит/c</p><hr width="100%">
+          <p>Скорость интернета зависит от качества услуги и еще от целого ряда сопутствующих параметров. 
+              Среди них – действия управляющих сегментами, особенности подключения точек, загрузка каналов, 
+              производительность клиентского оборудования и др. ПАО «Вымпелком» не может влиять на сторонние 
+              факторы и гарантировать заявленную скорость за пределами своей сети.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="wifiModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Wi-Fi-роутер Smart Box</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>Wi-Fi роутер: не входит</p><hr width="100%">
+            <p>Wi-Fi-роутер предназначен для подключения к Домашнему интернету 
+              Kazan.Provider по выделенной линии Ethernet. С его помощью можно создать собственную домашнюю 
+              сеть, выходить в интернет с нескольких компьютеров, планшетов, смартфонов — количество не ограничено.
+            <br>Встроенная точка доступа беспроводной сети Wi-Fi нового поколения с увеличенным радиусом
+             действия обеспечивает подключение ноутбуков, игровых приставок, медиаплееров 
+             и других сетевых устройств. Удобный интерфейс быстрой настройки поможет настроить доступ в 
+             интернет и подключить ТВ-приставку, не обращаясь за помощью специалистов.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Понятно</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end -->
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Kazan.Provider - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="../Internet_Provider_Website/wwwroot/lib/jquery/dist/jquery.min.js"></script>
+    <script src="../Internet_Provider_Website/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../FrontEnd/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
