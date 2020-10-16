@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kazan Provider</title>
+    <link rel="stylesheet" href="../Internet_Provider_Website/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/site.css" type="text/css" />
+    <link rel="stylesheet" href="./css/StyleSheet.css" type="text/css" />
+</head>
+<body>
+    <header>
+        <ul class="header-container">
+            <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle navbar-brand text-color" asp-page="/Index" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Kazan.Provider
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Услуги</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Акции и бонусы</a>
+                        <a class="dropdown-item Sidebar-item text-color" asp-page="/">Оплата</a>
+                    </div>
+                </div>
+            </li>
+            <li><a asp-page="/Tariffs" class="nav-item  text-color">Тарифы</a></li>
+            <li><a asp-page="/Reviews" class="nav-item  text-color">Отзывы</a></li>
+            <li><a asp-page="/Help" class="nav-item  text-color">Помощь</a></li>
+            <li>
+                <div class="right-item">
+                    <a asp-page="/LK" class="nav-item  text-color" id="Login">Войти</a>
+                    <a asp-page="/Registration-page" class="nav-item  text-color " id="Registration">Регистрация</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+<!-- start -->
+<div class="row justify-content-md-center" style="margin-top: 14%;">
+    <div class=" col-sm-3 col-lg-2">
+        <div class="text-center card-header">
+            <h3 class="ser-title">Пакет 3 ГБ</h3>
+        </div>
+        <div class="text-center card-body">
+           <p class="ser-description"> Интернет закончился раньше, чем вы планировали?
+            Докупите ещё 3 ГБ на максимальной скорости.</p>
+            <p class="ser-pay">Стоимость подключения 150 ₽</p>
+        </div>
+        
+        <div class="card-footer text-center">
+            <form action="#">
+                <button asp-page="/" type="button" class="btn btn-primary BT-request">Подключить</button>
+            </form>
+            <form action="#">
+                <button asp-page="/" type="button" class="btn btn-primary BT-request">Подробнее</button>
+            </form>
+        </div>
+    </div>
+    
+</div>
+
+<!-- end -->
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Kazan.Provider - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
