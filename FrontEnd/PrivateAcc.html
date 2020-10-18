@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kazan Provider</title>
+        <link rel="stylesheet" href="../InternetProvider/InternetProvider/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../FrontEnd/css/site.css" type="text/css" />
+        <link rel="stylesheet" href="../FrontEnd/css/StyleSheet.css" type="text/css" />
+    </head>
+    <body>
+        <header>
+            <ul class="header-container">
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle navbar-brand text-color" asp-page="/Index" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Kazan.Provider
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item Sidebar-item text-color" asp-page="/">Услуги</a>
+                            <a class="dropdown-item Sidebar-item text-color" asp-page="/">Акции и бонусы</a>
+                            <a class="dropdown-item Sidebar-item text-color" asp-page="/">Оплата</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" class="nav-item  text-color">Тарифы</a></li>
+                <li><a href="#" class="nav-item  text-color">Отзывы</a></li>
+                <li><a href="#" class="nav-item  text-color">Помощь</a></li>
+                <li>
+                    <div class="right-item">
+                        <a href="#" class="nav-item  text-color" id="Login">Выйти</a>
+                    </div>
+                </li>
+            </ul>
+        </header>
+    <!-- начало контетьта -->
+    <!-- style="background-image: url(https://static.beeline.ru/upload/images/images/svod-banner-desktop.jpg);" -->
+    <div class="PA-main-content">
+        <div class="d-flex justify-content-center ad-content">
+            <div class="p-2 flex-fill bd-highlight" >
+                <h3 class="ad-text">Рекламный текст для привлечения внимания</h3>
+            </div> 
+        </div> 
+        <div class="row">
+            <div class="d-flex flex-column bd-highligh custom-user-info" style="margin-right: 5%;">
+                <div class="p-2 flex-fill bd-highlight PA-item">Пользователь:  Оксана Темникова </div><hr noshade size="1" width="90%" color="white"/>
+                <div class="p-2 flex-fill bd-highlight PA-item">Номер телефона:  +7(900)-33-03-25</div><hr noshade size="1" width="90%" color="white"/>                
+                <div class="p-2 flex-fill bd-highlight PA-item">Эл. почта:  OkTem@gmail.com</div><hr noshade size="1" width="90%" color="white"/>
+                <div class="p-2 flex-fill bd-highlight PA-item">Адрес:  Луначарского 48-33</div><hr noshade size="1" width="90%" color="white"/>
+                <div class="p-2 flex-fill bd-highlight PA-item">Выбранный тариф:  Стартовый</div><hr noshade size="1" width="90%" color="white"/>
+            </div>
+        </div>
+    </div>
+    <!-- конецб контетьта -->
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Kazan.Provider - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
