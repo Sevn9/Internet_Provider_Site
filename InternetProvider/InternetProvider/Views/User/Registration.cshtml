@@ -1,0 +1,54 @@
+﻿@model RegistrationForm
+
+<div class="reg-content">
+    <form class="reg-inner-content" asp-action="Registration">
+        <div class="form-group">
+            <label asp-for="Name">Имя</label>
+            <input asp-for="Name" type="text" class="form-control" id="inputName">
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Фамилия</label>
+            <input asp-for="LastName" type="text" class="form-control" id="inputLastName">
+        </div>
+        <div class="form-group">
+            <label asp-for="Patronymic">Отчество</label>
+            <input asp-for="Patronymic" type="text" class="form-control" id="inputMiddleName">
+        </div>
+
+        <div class="form-group form-city">
+            <select asp-for="City" id="inputCity" class="form-control choose-city">
+                <option selected>Город</option>
+                <option value="Казань">Казань</option>
+                <option value="Азнакаево">Азнакаево</option>
+                <option value="Набережные Члены">Набережные Члены</option>
+
+            </select>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input asp-for="Email" type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPhoneNumber">Телефон</label>
+                <input asp-for="PhoneNumber" type="text" class="form-control" id="inputPhoneNumber">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword4">Пароль</label>
+            <input asp-for="Password" type="password" class="form-control" id="inputPassword4">
+        </div>
+
+        <div class="form-group">
+            <label for="inputСonfirmPassword">Подтверждение пароля</label>
+            <input asp-for="ConfirmPassword" type="password" class="form-control" id="inputСonfirmPassword">
+        </div>
+
+        <button type="submit" class="btn btn-primary reg-btn">Регистрация</button>
+        <small id="emailHelp" class="form-text text-muted">
+            Нажимая кнопку «Регистрация», вы принимаете условия
+            <a href="#">Пользовательского соглашения</a>
+        </small>
+    </form>
+</div>

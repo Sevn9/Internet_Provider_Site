@@ -1,0 +1,183 @@
+﻿
+#dropdownMenuLink {
+    padding: 0 10px 10px 10px;
+    font-size: 17px;
+    color: #212121;
+}
+
+#dropdownMenuLink:hover {
+    border: none;
+    color: #db9957;
+}
+
+.header-container {
+    margin-left:90px;
+    padding-top: 15px;
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-start;
+}
+
+.nav-item.text-color {
+    margin: 0 10px 0 10px;
+    padding: 10px 30px 0px 10px;
+    color: #212121;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 15px;
+}
+
+.nav-item.text-color:hover {
+    /* color: #ff9327;*/
+    color: #db9957;
+    text-decoration: none;
+}
+.right-item {
+    position: absolute;
+    right: 90px;
+    top: 15px;
+}
+
+
+header {
+    top: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: #f1f2f3;
+    z-index: 1;
+    text-align: center;
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.31);
+}
+
+
+
+/*для индекса*/
+.text-center {
+    position: absolute;
+    /*top: 45px;*/
+    right: 0;
+    left: 0;
+    padding-top: 50px;
+    height: 775px;
+    max-height: 800px;
+    background-image: url(https://kazan.domru.ru/_next/static/images/default-2b1ca6af1fa9fc40999a1f4a85597a68.jpg);
+    background-position: right center;
+    width: 100%;
+    /*   background-size: 100%;*/
+    background-repeat: no-repeat;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 180px 30% 0 23%;
+}
+
+.text-container {
+    text-align: left;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #ebebeb;
+}
+
+.btn.btn-primary {
+    background-color: #ff9327;
+    border: none;
+    padding: 10px 15px 10px 15px;
+    margin: 10px;
+}
+
+.btn.btn-primary:active:hover,
+.btn.btn-primary:focus {
+        background-color: #ff9327;
+        background-color: #ff9327;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+.btn.btn-primary:focus:active {
+            background-color: #d1771f;
+        }
+
+.first_text {
+    max-width: 550px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.space-container {
+    height: 800px;
+}
+
+.BestTariffs {
+    position: center;
+    padding: 10px 30px 50px 30px;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.item {
+    margin: 0 20px 0 20px;
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.31);
+}
+
+.card-body {
+    height: 90px;
+}
+
+.BT-request {
+    position: relative;
+    width: 90%;
+}
+
+.offers-request {
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.31);
+    height: 370px;
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+.offers-request-text {
+    padding-top: 110px;
+    margin: 20px;
+}
+
+button.offers-request-text {
+    font-size: 17px;
+}
+
+
+/*Для личного кабинета*/
+
+.LK_space-container {
+    height: 200px;
+}
+
+.LK_login {
+    position: relative;
+    margin: 0 auto;
+    max-width: 410px;
+    max-height: 460px;
+    font-size:17px;
+}
+
+
+.button-bottom {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bb-item {
+    flex:1 0 auto;
+}
+
+
+
