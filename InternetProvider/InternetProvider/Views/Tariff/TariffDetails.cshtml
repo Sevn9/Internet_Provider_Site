@@ -1,0 +1,72 @@
+﻿@model Models.TariffPlan
+
+@{
+    ViewData["Title"] = "TariffDetails";
+}
+
+<div class="t-details">
+    <div class="d-flex t-details flex-column">
+        <div class="col col-lg-9 ">
+            <h4>@Model.Name</h4><hr>
+            <h4>@Model.Speed</h4><hr>
+            <h4>@Model.Options</h4><hr>
+            <h4>@Model.IsAvailableRouter</h4><hr>
+            <h4>@Model.Price</h4><hr>
+            @if (User.Identity.IsAuthenticated)
+            {
+                Repository.DbRepository db = new Repository.DbRepository();
+                var account = (Models.Account)db.GetItem(new Guid(User.Identity.Name), "Account");
+                var fullName = account.LastName + " " + account.Name;
+                <div class="container">
+                    <div class="row"></div>
+                    <div class="row">
+                        <div class="col-2">User</div>
+                        <text class="col-4">@fullName</text>
+                        <div class="col-4" id="user" style="display:none">@User.Identity.Name</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">Message</div>
+                        <div class="col-4"><input type="text" id="messageInput" /></div>
+                    </div>
+                    <div class="row">&nbsp;</div>
+                    <div class="row">
+                        <div class="col-6">
+                            <form action="addComment" method="post">
+                                <input type="button" id="sendButton" value="Send Message" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <hr />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <ul id="messagesList">
+            @if (Model.Reviews != null)
+            {
+                @foreach (var item in Model.Reviews)
+                {
+                    @Html.DisplayFor(modelItem => item.PersonalDataId);
+                    @Html.DisplayFor(modelItem => item.Content);
+                    @Html.DisplayFor(modelItem => item.ReleaseDate);
+                }
+            }
+        </ul>
+    </div>
+</div>
+
+<div>
+    <a asp-action="TariffList">Back to List</a>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>

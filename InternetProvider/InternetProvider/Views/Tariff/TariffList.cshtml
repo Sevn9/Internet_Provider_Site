@@ -1,0 +1,36 @@
+﻿@model List<Models.TariffPlan>
+
+<h2 class="text-center" style="margin-top: 7%; margin-bottom: 2%;">Тарифы</h2>
+@if (Model != null)
+{
+    @foreach (var item in Model)
+    {
+        <div class="BestTariffs">
+        <div class="card item d-flex flex-column" style="width: 18rem;" id="first_tariff">
+            <div class="card-body">
+                <h4 class="card-title">@item.Name</h4>
+                <p class="card-text description">@item.Description</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item price">@item.Price &#8381;/мес</li>
+                @if (item.IsAvailableRouter)
+                {
+                    <li class="list-group-item gb">@item.Speed МБит/c + роутер</li>
+                }
+                else
+                {
+                    <li class="list-group-item gb">@item.Speed МБит/c</li>
+                }
+            </ul>
+            <div class="card-body mt-auto">
+                <form action="#">
+                    <a asp-controller="Tariff" asp-action="TariffDetails" asp-route-id="@item.Id">Подробнее</a>|
+                </form>
+                <form action="#">
+                    <button asp-page="/" type="button" class="btn btn-primary BT-request">Подключить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    }
+}
