@@ -1,0 +1,45 @@
+﻿@model Models.Account
+
+<div class="PA-main-content">
+    <div class="d-flex justify-content-center ad-content">
+        <div class="p-2 flex-fill bd-highlight">
+            <h3 class="ad-text">Рекламный текст для привлечения внимания</h3>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        @if (Model != null)
+        {
+            <div class="d-flex flex-column bd-highligh custom-user-info" style="margin-right: 5%;">
+                <div class="p-2 flex-fill bd-highlight PA-item">Пользователь:  
+                    @Html.DisplayFor(modelItem => Model.LastName) @Html.DisplayFor(modelItem => Model.Name)
+                </div><hr noshade size="4" width="90%" color="white" />
+                <div class="p-2 flex-fill bd-highlight PA-item">
+                    Номер телефона:  @Html.DisplayFor(modelItem => Model.PhoneNumber)
+                </div><hr noshade size="4" width="90%" color="white" />                
+                      <div class="p-2 flex-fill bd-highlight PA-item">Эл. почта:  @Html.DisplayFor(modelItem => Model.Email)</div><hr noshade size="4" width="90%" color="white" />
+                <div class="p-2 flex-fill bd-highlight PA-item">Адрес:  @Html.DisplayFor(modelItem => Model.City)</div><hr noshade size="4" width="90%" color="white" />
+                <a href="#" class="PA-edit p-2 flex-fill bd-highlight PA-item">Редактировать</a>
+            </div>
+        }
+        <div class="users-tariff" style="margin-left: 5%;">
+            <h3 style="margin: 20px;">Выбранные тарифы</h3>
+            <div class="card item" style="width: 18rem;" id="second_tariff">
+                <div class="card-body">
+                    <h4 class="card-title">Тариф "Вне роуминга"</h4>
+                    <p class="card-text description">Для тех кто постоянно в поездках</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item price">600 руб/мес</li>
+                    <li class="list-group-item gb">50 гб/мес для любого региона России</li>
+                </ul>
+                <div class="card-body">
+                    <form action="#">
+                        <button asp-page="/" type="button" class="btn btn-primary BT-request">Подробнее</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
