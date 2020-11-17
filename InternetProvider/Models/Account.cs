@@ -25,10 +25,9 @@ namespace Models
         public string Password { get; set; }
         [Column("role")]
         public string Role { get; set; }
-        public enum UserRole
-        {
-            Admin,
-            Client
-        }
+        [Column(Name = "tariffplanid")]
+        public Guid TariffPlanId { get; set; }
+        [Column(Name = "serviceid")]
+        public Guid ServiceId { get; set; }
     }
 }

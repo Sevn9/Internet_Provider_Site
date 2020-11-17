@@ -11,14 +11,14 @@ namespace Repository
         /// Получение всех объектов
         /// </summary>
         /// <returns></returns>
-        IEnumerable<object> GetItemList(Type type);
+        IEnumerable<object> GetItemList(string type);
         /// <summary>
         /// Получение объекта
         /// </summary>
         /// <param name="id">Id объекта</param>
         /// <param name="type">Тип объекта</param>
         /// <returns></returns>
-        object GetItem(Guid id, Type type);
+        object GetItem(Guid id, string type);
         /// <summary>
         /// Создание объекта
         /// </summary>

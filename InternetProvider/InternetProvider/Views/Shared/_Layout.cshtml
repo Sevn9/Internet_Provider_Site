@@ -28,8 +28,19 @@
             <li><a asp-page="/Help" class="nav-item  text-color">Помощь</a></li>
             <li>
                 <div class="right-item">
-                    <a asp-page="/LK" class="nav-item  text-color" id="Login">Войти</a>
-                    <a asp-page="/Registration-page" class="nav-item  text-color " id="Registration">Регистрация</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        Repository.DbRepository db = new Repository.DbRepository();
+                        var account = (Models.Account)db.GetItem(new Guid(User.Identity.Name), "Account");
+                        var fullName = account.LastName + " " + account.Name;
+
+                        <a asp-controller="User" asp-action="PersonalPage" class="nav-item  text-color">@fullName</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="User" asp-action="Authorization" class="nav-item  text-color" id="Login">Войти</a>
+                        <a asp-controller="User" asp-action="Registration" class="nav-item  text-color " id="Registration">Регистрация</a>
+                    }
                 </div>
             </li>
         </ul>

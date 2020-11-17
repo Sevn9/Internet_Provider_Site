@@ -8,8 +8,8 @@ namespace InternetProvider.Models
 {
     public class AuthorizationForm
     {
-        [Required(ErrorMessage = "Не указан Email")]
-        public string Email { get; set; }
+        [Required(ErrorMessage = "Не указана Почта")]
+        public string LoginKey { get; set; }
 
         [Required(ErrorMessage = "Не указан пароль")]
         public string Password { get; set; }

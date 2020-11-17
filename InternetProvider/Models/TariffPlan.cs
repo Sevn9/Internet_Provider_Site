@@ -7,24 +7,26 @@ using System.Threading.Tasks;
 
 namespace Models
 {
+    [Table(Name = "tariffplan")]
     public class TariffPlan
     {
         [Column("id", IsPrimaryKey = true)]
-        public Guid Id { get; }
+        public Guid Id { get; set; }
         [Column("name")]
-        public string Name { get; }
+        public string Name { get; set; }
         [Column("description")]
-        public string Description { get; }
+        public string Description { get; set; }
         [Column("speed")]
-        public int Speed { get; }
+        public int Speed { get; set; }
         [Column("isavailablerouter")]
-        public bool IsAvailableRouter { get; }
+        public bool IsAvailableRouter { get; set; }
         [Column("price")]
-        public decimal Price { get; }
+        public decimal Price { get; set; }
         [Column("mobileinternet")]
-        public int? MobileInternet { get; }
-        [Column("options")]
-        public string Options { get; }
+        public int? MobileInternet { get; set; }
+        [Column("option")]
+        public string Options { get; set; }
+        public IEnumerable<Review> Reviews { get; set; }
 
 
     }

@@ -5,15 +5,14 @@ using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class DbRepository : IRepository<object>
+    public class DbRepository
     {
-        private const string connectionString = "Host=localhost;Username=postgres;Password=Kekmlg1337;Database=internetprovider";
+        private const string connectionString = "Host=localhost;Username=postgres;Password=access;Database=internetprovider";
 
-        public DataConnection _context
+        public DataConnection Context
         {
             get
             {
@@ -25,9 +24,10 @@ namespace Repository
             }
         }
 
-        private ITable<Account> Accounts => _context.GetTable<Account>();
-        private ITable<Service> Services => _context.GetTable<Service>();
-        private ITable<TariffPlan> TariffPlans => _context.GetTable<TariffPlan>();
+        private ITable<Account> Accounts => Context.GetTable<Account>();
+        private ITable<Service> Services => Context.GetTable<Service>();
+        private ITable<TariffPlan> TariffPlans => Context.GetTable<TariffPlan>();
+        private ITable<Review> Reviews => Context.GetTable<Review>();
 
         public void Create(object item)
         {
@@ -42,34 +42,42 @@ namespace Repository
                 case ("TariffPlan"):
                     CreateTariff((TariffPlan)item);
                     break;
+                case ("Review"):
+                    CreateReview((Review)item);
+                    break;
                 default:
                     throw new NotImplementedException();
             };
         }
 
+        private void CreateReview(Review item)
+        {
+            Context.Insert(item);
+        }
+
         private void CreateAccount(Account item)
         {
-            _context.Insert(item);
+            Context.Insert(item);
         }
 
         private void CreateService(Service item)
         {
-            _context.Insert(item);
+            Context.Insert(item);
         }
 
         private void CreateTariff(TariffPlan item)
         {
-            _context.Insert(item);
+            Context.Insert(item);
         }
 
         public void Delete(object item)
         {
-            _context.Delete(item);
+            Context.Delete(item);
         }
     
-        public object GetItem(Guid id, Type type)
+        public object GetItem(Guid id, string type)
         {
-            return type.Name switch
+            return type switch
             {
                 "Account" => GetAccount(id),
                 "Service" => GetService(id),
@@ -93,9 +101,9 @@ namespace Repository
             return TariffPlans.FirstOrDefault(x => x.Id == id);
         }
 
-        public IEnumerable<object> GetItemList(Type type)
+        public IEnumerable<object> GetItemList(string type)
         {
-            return type.Name switch
+            return type switch
             {
                 "Account" => GetAccountList(),
                 "Service" => GetServiceList(),
@@ -104,29 +112,82 @@ namespace Repository
             };
         }
 
+        public IEnumerable<Review> GetReviewList(Guid id)
+        {
+            var list = Reviews.Where(x => x.ItemTypeId == id).ToList();
+            if (list != null)
+                return list;
+            return null;
+        }
+
         private IEnumerable<Account> GetAccountList()
         {
-            return Accounts.ToList();
+            var list = Accounts.ToList();
+            if (list != null)
+                return list;
+            return null;
         }
 
         private IEnumerable<Service> GetServiceList()
         {
-            return Services.ToList();
+            var list = Services.ToList();
+            if (list != null)
+                return list;
+            return null;
         }
 
         private IEnumerable<TariffPlan> GetTariffList()
         {
-            return TariffPlans.ToList();
+            var list = TariffPlans.ToList();
+            if (list != null)
+                return list;
+            return null;
         }
 
         public void Update(object item)
         {
-            _context.Update(item);
+            switch (item.GetType().Name)
+            {
+                case ("Account"):
+                    UpdateAccount((Account)item);
+                    break;
+                case ("Service"):
+                    UpdateSerivce((Service)item);
+                    break;
+                case ("TariffPlan"):
+                    UpdateTariffPlan((TariffPlan)item);
+                    break;
+                case ("Review"):
+                    UpdateReview((Review)item);
+                    break;
+                default:
+                    throw new NotImplementedException();
+            };
+        }
+
+        private void UpdateReview(Review item)
+        {
+            Context.Update(item);
+        }
+
+        private void UpdateTariffPlan(TariffPlan item)
+        {
+            Context.Update(item);
+        }
+
+        private void UpdateSerivce(Service item)
+        {
+            Context.Update(item);
+        }
+
+        private void UpdateAccount(Account item)
+        {
+            Context.Update(item);
         }
 
         public void Dispose()
         {
-            _context.Dispose();
+            Context.Dispose();
         }
 
         public Account GetAccountByEmail(string email)

@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InternetProvider", "InternetProvider\InternetProvider.csproj", "{021FFA37-9442-4CA0-8032-39E8E1B58B91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{43737C47-8452-4A59-9C15-D5EC5C5336C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csproj", "{43737C47-8452-4A59-9C15-D5EC5C5336C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{783FB0E5-8319-4745-9758-F9A3D83C66DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{783FB0E5-8319-4745-9758-F9A3D83C66DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "Security\Security.csproj", "{BB9E0ACC-6B6D-4D7B-9783-1CA8869A5A7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "Security\Security.csproj", "{BB9E0ACC-6B6D-4D7B-9783-1CA8869A5A7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
