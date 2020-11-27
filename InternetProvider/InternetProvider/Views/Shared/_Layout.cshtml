@@ -23,9 +23,9 @@
                     </div>
                 </div>
             </li>
-            <li><a asp-page="/Tariffs" class="nav-item  text-color">Тарифы</a></li>
-            <li><a asp-page="/Chat" class="nav-item  text-color">Чат</a></li>
-            <li><a asp-page="/Help" class="nav-item  text-color">Помощь</a></li>
+            <li><a asp-controller="Tariff" asp-action="TariffList" class="nav-item  text-color">Тарифы</a></li>
+            
+            <li><a asp-controller="Home" asp-action="Help" class="nav-item  text-color">Помощь</a></li>
             <li>
                 <div class="right-item">
                     @if (User.Identity.IsAuthenticated)
