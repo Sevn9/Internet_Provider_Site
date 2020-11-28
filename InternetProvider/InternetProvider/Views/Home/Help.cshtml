@@ -1,36 +1,5 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
 <body>
-  <header>
-    <ul class="header-container">
-      <li>
-        <div class="dropdown">
-          <a class="dropdown-toggle navbar-brand text-color" asp-page="/Index" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Internet Service Provider
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item Sidebar-item text-color" asp-page="/">Услуги</a>
-            <a class="dropdown-item Sidebar-item text-color" asp-page="/">Акции и бонусы</a>
-            <a class="dropdown-item Sidebar-item text-color" asp-page="/">Оплата</a>
-          </div>
-        </div>
-      </li>
-      <li><a asp-page="/Tariffs" class="nav-item  text-color">Тарифы</a></li>
-      <li><a asp-page="/Chat" class="nav-item  text-color">Чат</a></li>
-      <li><a asp-page="/Help" class="nav-item  text-color">Помощь</a></li>
-      <li>
-        <div class="right-item">
-          <a asp-page="/LK" class="nav-item  text-color" id="Login">Войти</a>
-          <a asp-page="/Registration-page" class="nav-item  text-color " id="Registration">Регистрация</a>
-        </div>
-      </li>
-    </ul>
-  </header>
-
-  <!--контент -->
   <div class="help-main-content">
     <h3 class="top-text">Часто задаваемые вопросы</h3>
 
@@ -49,7 +18,7 @@
             высокую востребованность экономической целесообразности принимаемых решений. Безусловно, глубокий уровень
             погружения создаёт предпосылки для поэтапного и последовательного развития общества.
           </div>
-          <img src="./images/img2_cut.jpg" class="d-block w-100 help-img" alt="...">
+          <img src="~/images/img2_cut.jpg" class="d-block w-100 help-img" alt="...">
         </div>
         <div class="carousel-item">
           <div class="help-text-space"><strong>В моем городе нет офиса провайдера!</strong></div>
@@ -59,7 +28,7 @@
             высокую востребованность экономической целесообразности принимаемых решений. Безусловно, глубокий уровень
             погружения создаёт предпосылки для поэтапного и последовательного развития общества.
           </div>
-          <img src="./images/office1_cut.jpg" class="d-block w-100 help-img" alt="...">
+          <img src="~/images/office1_cut.jpg" class="d-block w-100 help-img" alt="...">
         </div>
         <div class="carousel-item">
           <div class="help-text-space"><strong>В моем районе не подключен ??????, что делать?</strong></div>
@@ -69,7 +38,7 @@
             высокую востребованность экономической целесообразности принимаемых решений. Безусловно, глубокий уровень
             погружения создаёт предпосылки для поэтапного и последовательного развития общества.
           </div>
-          <img src="./images/dunno.png" class="d-block w-100 help-img" alt="...">
+          <img src="~/images/dunno.png" class="d-block w-100 help-img" alt="...">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -90,5 +59,4 @@
     </div>
   </div>
   <div class="help_space-container"></div>
-  <!--контент кончився-->
 </body>

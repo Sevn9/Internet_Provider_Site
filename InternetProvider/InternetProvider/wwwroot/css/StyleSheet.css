@@ -1,4 +1,4 @@
-﻿
+﻿@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
 #dropdownMenuLink {
     padding: 0 10px 10px 10px;
     font-size: 17px;
@@ -54,7 +54,7 @@ header {
 
 
 /*для индекса*/
-.text-center {
+.text-center-img {
     position: absolute;
     /*top: 45px;*/
     right: 0;
@@ -91,7 +91,6 @@ header {
 .btn.btn-primary:active:hover,
 .btn.btn-primary:focus {
         background-color: #ff9327;
-        background-color: #ff9327;
         outline: none !important;
         box-shadow: none !important;
     }
@@ -119,12 +118,12 @@ header {
 }
 
 .item {
-    margin: 0 20px 0 20px;
+    margin: 10px 20px;
     box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.31);
 }
 
 .card-body {
-    height: 90px;
+    height: 160px;
 }
 
 .BT-request {
@@ -175,9 +174,139 @@ button.offers-request-text {
     align-items: center;
 }
 
-.bb-item {
-    flex:1 0 auto;
+
+/*регистрация*/
+.reg-content{
+    position: relative;
+    display: block;
+    margin:5% 30% 5% 31%;
+}
+
+.reg-inner-content{
+    position: relative;
+    margin: 0 auto;
+    max-width: 410px;
+    max-height: 460px;
+    font-size:17px;
+}
+
+/* .form-control.choose-city{
+    border:none;
+    font-size:17px;
+    padding: 0  !important;
+    margin-left: 0 !important;
+}
+
+.form-city{
+    margin-left: 0 !important;
+    max-width: 80px;
+}
+
+#inputCity:focus {
+        border:none !important;
+        outline: none !important; 
+        box-shadow: none !important;
+}
+
+#inputCity:hover{
+    text-decoration: underline;
+} */
+
+.reg-btn{
+    font-size: 17px;
+    margin-left: 0 !important;
 }
 
 
+/* личный кабинет? */
+.ad-content{
+    position: relative;
+    height: 150px;
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.31);
+    text-align: center;
+    background-image: url(https://24warez.ru/uploads/posts/130717/255112/1.jpg);
+    background-size: 100%;
+    background-position-y:-40%;
+    margin: 0 8%;
+}
 
+.ad-text{
+    padding: 40px;
+    color:#fff;
+}
+
+
+.user-info{
+    position: relative;
+    margin: 5% 7% 3% 7%;
+}
+
+.users-tariff{
+    position: relative;
+    margin-left: 7%;
+}
+/*ah shit here we go again*/
+.PA-main-content{
+    margin: 7%;
+}
+
+.custom-user-info{
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.31);
+    padding: 15px;
+    text-align: left;
+    width: 35%;
+    margin-top: 20px; 
+    font-size: 20px; 
+    background-color: #cbcbcb;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.PA-item{
+   margin-left: 12px;
+}
+
+.PA-edit {
+    color: #464646;
+    font-size: 18px;
+}
+
+.custom-user-info{
+    margin-left: 33%;
+    margin-right: auto;
+}
+
+.PA-edit:hover {
+    /* color: #ff9327;*/
+    color: #db9957;
+    text-decoration: #db9957;
+}
+
+/* подробнее тариф */
+
+.t-details{
+    position: relative;
+    display: block;
+    margin-left: 20%;
+    margin-right: 18%;
+    text-align: left;
+    margin-top: 150px;
+}
+
+/* отзывы */
+.rev-select{
+    display: block;
+    margin: 5% 30% 5% 31%;
+    font-size: 20px;
+}
+
+.rev-container {   
+    width: 75%;
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px; /* скругление углов блока */
+    padding: 16px; /* внутренние поля */
+    margin: 30px auto; /* внешние отступы */
+}
+
+.td-pad{
+    padding: 5px 13px;
+}

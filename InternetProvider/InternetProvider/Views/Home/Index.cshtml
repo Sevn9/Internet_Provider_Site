@@ -1,10 +1,10 @@
-﻿<div class="text-center">
+﻿<div class="text-center-img">
     <ul class="text-container">
         <li><h1>Интернета хватит на всех</h1></li>
         <li><p class="first_text">Даже если все дома. Онлайн спорт, школа, работа, кинотеатр, прямые эфиры, игры и соцсети. Стабильный Интернет для каждого и на всех устройствах.</p></li>
         <li>
-            <button type="button" class="btn btn-primary">Оставить заявку на подключение</button>
-            <button type="button" class="btn btn-primary">Я уже клиент</button>
+            <button onclick="location.href='@Url.Action("Registration", "User")'"  type="button" class="btn btn-primary">Оставить заявку на подключение</button>
+            <button onclick="location.href='@Url.Action("Authorization", "User")'" type="button" class="btn btn-primary">Я уже клиент</button>
         </li>
     </ul>
 </div>
@@ -22,7 +22,7 @@
           <li class="list-group-item gb">50 МБит/c + Wi-Fi роутер</li>
         </ul>
         <div class="card-body">
-            <button asp-page="/" type="button" class="btn btn-primary BT-request">Подключить</button>
+            <button onclick="location.href='@Url.Action("TariffList", "Tariff")'" type="button" class="btn btn-primary BT-request">Подключить</button>
         </div>
     </div>
 
@@ -37,7 +37,7 @@
             <li class="list-group-item gb">100 Мбит/с</li>
         </ul>
         <div class="card-body">
-            <button asp-page="/" type="button" class="btn btn-primary BT-request">Подключить</button>
+            <button onclick="location.href='@Url.Action("TariffList", "Tariff")'" type="button" class="btn btn-primary BT-request">Подключить</button>
         </div>
     </div>
 
@@ -52,11 +52,11 @@
             <li class="list-group-item gb">70 Мбит/с + безлимитные мессенджеры</li>
         </ul>
         <div class="card-body">
-            <button asp-page="/" type="button" class="btn btn-primary BT-request">Подключить</button>
+            <button onclick="location.href='@Url.Action("TariffList", "Tariff")'" type="button" class="btn btn-primary BT-request">Подключить</button>
         </div>
     </div>
 </div>
 <div class="offers-request">
     <h2 class="offers-request-text">Подключись сейчас и получи мобильное ТВ в подарок</h2>
-    <button asp-page="/" type="button" class="btn btn-primary offers-request-text">Оставить заявку на подключение</button>
+    <button onclick="location.href='@Url.Action("Registration", "User")'" type="button" class="btn btn-primary offers-request-text">Оставить заявку на подключение</button>
 </div>
